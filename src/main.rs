@@ -8,7 +8,7 @@ fn main() {
     let (mut socket, _response) = connect(Url::parse(BASE_URL).unwrap()).expect("Can't connect");
     println!("{:#?}", _response);
 
-    let authorization = r#"{"action": "auth", "key": "PK6J93WFUXB5R7TD8ROG", "secret": "6RasUPSw9RcDl9kcVwtivv3V5ajREq2j0umh5nEk"}"#;
+    let authorization = r#"{"action": "auth", "key": "S3Cr3t-K3Y", "secret": ""}"#;
     let subscribe = r#"{"action":"subscribe","trades":["BTC/USD","ETH/USD"],"quotes":[],"bars":[]}"#;
 
     socket.write_message(Message::Text(authorization.into())).unwrap();
